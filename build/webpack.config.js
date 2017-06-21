@@ -6,8 +6,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, '..', './lib'),
-    filename: 'vue-period.js',
-    library: 'VuePeriod',
+    filename: 'vue-grid-system.js',
+    library: 'VueGridSystem',
     libraryTarget: 'umd'
   },
   externals: {
@@ -65,7 +65,7 @@ module.exports = {
       }
     }),
     new ExtractTextPlugin({
-      filename: '../lib/vue-period.css',
+      filename: '../lib/vue-grid-system.css',
       allChunks: true
     })
   ]

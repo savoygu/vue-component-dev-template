@@ -1,2 +1,2 @@
-# vue-component-dev-template
-Help you develop templates for vue components
+# vue-grid-system
+Vue-based grid system component
