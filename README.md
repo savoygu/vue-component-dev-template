@@ -1,2 +1,3 @@
-# vue-grid-system
-Vue-based grid system component
+# vue-component-dev-template(refer to vuejs-template/webpack)
+
+> Help you develop templates for vue components
