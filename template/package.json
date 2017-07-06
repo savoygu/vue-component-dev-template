@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "author": "{{ author }}",
   "private": true,
-  "main": "lib/{{name}}.js",
+  "main": "lib/{{ name }}.js",
   "files": [
     "lib",
     "build",
@@ -12,28 +12,27 @@
     "src"
   ],
   "scripts": {
-    "deploy": "npm run build && npm run demo:build && npm run demo:prepublish",
     "build": "rm -rf ./lib && webpack --config ./build/webpack.config.js --progress --hide-modules",
     "demo:dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot --config ./build/webpack.example.dev.conf.js",
     "demo:build": "rm -rf ./example/dist && cross-env NODE_ENV=production webpack --config ./build/webpack.example.prod.conf.js",
-    "demo:prepublish": "rm -rf ./example/prepublish && cross-env NODE_ENV=prepublish webpack --config ./build/webpack.example.prod.conf.js"
+    "demo:prepublish": "rm -rf ./gh-pages && cross-env NODE_ENV=prepublish webpack --config ./build/webpack.example.prod.conf.js",
+    "deploy": "npm run build && npm run demo:build && npm run demo:prepublish",
+    "publish": "npm run deploy && bash ./build/gh-pages.sh"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:savoygu/vue-grid-system.git"
+    "url": "git@github.com:{{ author }}/{{ name }}.git"
   },
   "keywords": [
     "vue",
-    "vue-grid-system",
-    "grid",
-    "grid system",
+    "{{name}}",
     "components"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/savoygu/vue-grid-system/issues"
+    "url": "https://github.com/{{ author }}/{{ name }}/issues"
   },
-  "unpkg": "lib/vue-grid-system.js",
+  "unpkg": "lib/{{ name }}.js",
   "dependencies": {
     "vue": "^2.3.3"
   },
