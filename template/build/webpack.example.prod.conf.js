@@ -12,16 +12,23 @@ module.exports = merge(baseWebpackConfig, {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
-          use: "css-loader",
-          fallback: "style-loader"
+          fallback: "vue-style-loader",
+          use: "css-loader"
+        })
+      },
+      {
+        test: /\.less/,
+        loader: ExtractTextPlugin.extract({
+          fallback: "vue-style-loader",
+          use: ["css-loader", "less-loader"]
         })
       }
     ]
   },
   devtool: '#source-map',
   output: {
-    path: path.resolve(__dirname, '..', `${isProduction ? './example/dist' : './gh-pages'}`),
-    publicPath: isProduction ? '/' : '/{{name}}',
+    path: path.resolve(__dirname, '..', `./example/${isProduction ? 'dist' : 'prepublish'}`),
+    publicPath: isProduction ? '/' : '/vue-period',
     filename: 'js/[name].[chunkhash].js'
   },
   plugins: [
