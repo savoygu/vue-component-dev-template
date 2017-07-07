@@ -12,8 +12,15 @@ module.exports = merge(baseWebpackConfig, {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
-          use: "css-loader",
-          fallback: "style-loader"
+          fallback: "vue-style-loader",
+          use: "css-loader"
+        })
+      },
+      {
+        test: /\.less/,
+        loader: ExtractTextPlugin.extract({
+          fallback: "vue-style-loader",
+          use: ["css-loader", "less-loader"]
         })
       }
     ]
