@@ -8,7 +8,8 @@
       <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
       <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
       <br>
-      <li><a href="http://savoygu.github.io/vue-component-template/" target="_blank">Docs for This Template (<i class="coming"> Coming soon... </i>)</a></li>
+      <li><a href="http://savoygu.github.io/vue-component-template/" target="_blank">Docs for This Template (<i
+          class="coming"> Coming soon... </i>)</a></li>
     </ul>
     <h2>Ecosystem</h2>
     <ul>
@@ -29,26 +30,34 @@
     }
   }
 </script>
-<style>
-  h1, h2 {
-    font-weight: normal;
-  }
+<style lang="less" rel="stylesheet/less">
+  .hello {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
+    h1, h2 {
+      font-weight: normal;
+    }
 
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
 
-  .coming {
-    color: red;
-  }
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
 
-  a {
-    color: #42b983;
+    .coming {
+      color: red;
+    }
+
+    a {
+      color: #42b983;
+    }
   }
 </style>

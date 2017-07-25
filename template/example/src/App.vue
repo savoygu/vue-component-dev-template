@@ -1,6 +1,12 @@
 <template>
   <div id="app">
     <demonstration
+      tag="h2"
+      title="hello 组件"
+      description="组件模板"
+      :show-content="false">
+    </demonstration>
+    <demonstration
         title="示例代码标题"
         anchor="demo-code-title"
         :highlight="sourcecode">
@@ -16,12 +22,16 @@
         对你的代码进行描述
       </template>
     </demonstration>
-    <p>示例使用详情请参考：（<a href="https://github.com/savoygu/vue-demonstration">https://github.com/savoygu/vue-demonstration</a>）</p>
+    <demonstration
+      :show-content="false">
+      <p>示例使用详情请参考：（<a href="https://github.com/savoygu/vue-demonstration">https://github.com/savoygu/vue-demonstration</a>）</p>
+    </demonstration>
   </div>
 </template>
 
 <script type="es6">
   import { sourcecode } from './template'
+
   export default {
     data () {
       return {
@@ -34,15 +44,6 @@
 
 <style lang="less" rel="stylesheet/less">
   #app {
-    width: 1000px;
-    margin: 0 auto;
-    .hello {
-      font-family: 'Avenir', Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-align: center;
-      color: #2c3e50;
-      margin-top: 60px;
-    }
+    margin: 60px auto;
   }
 </style>
