@@ -8,7 +8,7 @@
       <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
       <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
       <br>
-      <li><a href="http://savoygu.github.io/vue-component-template/" target="_blank">Docs for This Template (<i> Coming soon... </i>)</a></li>
+      <li><a href="http://savoygu.github.io/vue-component-template/" target="_blank">Docs for This Template (<i class="coming"> Coming soon... </i>)</a></li>
     </ul>
     <h2>Ecosystem</h2>
     <ul>
@@ -44,7 +44,7 @@
     margin: 0 10px;
   }
 
-  i {
+  .coming {
     color: red;
   }
 
